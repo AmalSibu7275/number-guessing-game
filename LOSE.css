@@ -1,0 +1,106 @@
+body {
+    font-family: sans-serif; 
+    margin: 0;
+    background: url(images/joker\ \(2\).jpg) no-repeat center center fixed; 
+    background-size: cover;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50%;
+    text-align: center;
+    padding: 60px;
+    overflow: hidden;
+}
+
+.eater-regular {
+    font-family: "Eater", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+#lose-container {
+    background: rgba(0, 0, 0, 0.7); 
+    padding: 40px;
+    border: 3px solid crimson;
+    border-radius: 15px;
+    width: 70%;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.8);
+    opacity: 0;
+    animation: fadeInDown 0.4s ease-in-out 0.3s forwards;
+
+}
+
+
+#lose-title {
+    font-size: 4.3rem;
+    font-family: "Eater", sans-serif;
+    color: crimson;
+    text-shadow: 8px 3px 1px rgba(0, 0, 0, 0.8);
+    margin-bottom: 15px;
+}
+
+
+#lose-subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #ffcc00;
+    font-style: italic;
+}
+
+#lose-title, #lose-subtitle {
+    animation: fadeInText 0.5s ease-in-out forwards;
+}
+
+
+#lose-message {
+    font-size: 1.3rem;
+    line-height: 1.8;
+    margin-bottom: 30px;
+    color: #f0f0f0;
+}
+
+
+#retry-button, #leaderboard-button {
+    display: inline-block;
+    background-color: crimson;
+    color: white;
+    text-decoration: none;
+    padding: 15px 30px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.3rem;
+    margin: 10px;
+    transition: 0.3s;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.6);
+}
+
+#retry-button:hover, #leaderboard-button:hover {
+    background-color: darkred;
+    transform: scale(1.1);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.8);
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+@media (max-width: 768px) {
+    #retry-button, #leaderboard-button {
+        padding: 10px 20px;
+        font-size: 1rem;
+    }
+    #lose-container {
+        width: 90%;
+        padding: 20px;
+    }
+}

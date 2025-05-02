@@ -1,0 +1,44 @@
+body {
+    font-family: 'creepster', sans-serif;
+    text-align: center;
+    margin: 20px;
+  }
+  h2 {
+    color: white;
+  }
+  .popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    padding: 20px;
+    background-color: black;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+    text-align: center;
+    display: none;
+  }
+  
+  .hearts {
+    font-size: 50px;
+    text-align: center;
+    margin: 10px;
+  }
+  
+  .close-btn {
+    font-family: 'creepster', sans-serif;
+    font-size: 22px;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background: rgb(41, 41, 235);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .close-btn:hover {
+    background: rgb(5, 5, 182);
+  }
+  

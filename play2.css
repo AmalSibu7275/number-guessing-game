@@ -1,0 +1,139 @@
+body, html {
+    margin: 0;
+    height: 100%;
+    overflow: hidden;
+    font-family: sans-serif;
+    background-color: black;
+    background: url(images/clown.jpeg) no-repeat center center fixed;
+    background-size: cover;
+    position: relative;
+}
+
+
+.eater-regular {
+    font-family: "Eater", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+
+.clown {
+    position: absolute;
+    font-family: Eater, sans-serif;
+    color: whitesmoke;
+    margin: 0;
+    top: 140px;
+    left: 20px;
+    opacity: 1;
+    z-index: 2;
+}
+
+@keyframes flicker {
+    0%, 100% { opacity: 1;}
+    20% {opacity: 0.5;}
+}
+
+.clown h1 {
+    font-size: 3.69rem;
+    text-shadow: 14px 8px 5px rgba(0, 0, 0, 0.8);
+    color: rgba(255, 255, 255, 0.9);
+    margin-left: 20px;
+}
+
+.clown h2 {
+    font-size: 2.69rem;
+    text-shadow: 10px 3px 5px rgba(0, 0, 0, 0.8);
+    color: rgba(255, 255, 255, 0.9);
+    margin-left: 70px;
+    animation: flicker 0.5s infinite;
+}
+
+
+.input-container {
+    margin-top: 80px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 45px;
+}
+
+input[type="text"] {
+    font-size: 1.5rem;
+    padding: 10px 20px;
+    border: 2px solid white;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    outline: none;
+    width: 300px;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+input[type="text"]::placeholder {
+    animation: fadePlaceholder 2s infinite;
+    color: rgba(255, 255, 255, 0.85);
+}
+
+@keyframes fadePlaceholder {
+    0%, 100% { opacity: 1;}
+    50% { opacity: 0.5;}
+}
+
+
+.arrow-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.9rem;
+    text-decoration: none;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.7);
+    border: 3px solid white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin: 10x;
+    line-height: 1;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
+
+}
+
+
+.arrow-button:hover {
+    transform: scale(1.1);
+    background-color: rgba(255, 0, 0, 0.521);
+    color: rgba(0, 0, 0, 0.9);
+}
+
+
+@media (max-width: 768px) {
+    .input-container {
+        gap: 30px;
+    }
+
+    input[type="text"] {
+        width: 250px;
+    }
+}
+
+@media (max-width: 480px) {
+    .clown {
+        padding: 10px;
+    }
+
+    .clown h1 {
+        font-size: 2.5rem;
+    }
+
+    .clown h2 {
+        font-size: 2rem;
+    }
+
+    .arrow-button {
+        width: 50px;
+        height: 50px;
+        font-size: 2rem;
+    }
+}

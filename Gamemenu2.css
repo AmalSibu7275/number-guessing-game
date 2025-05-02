@@ -1,0 +1,123 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    background-color:rgb(73, 69, 69);
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+}
+
+.container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 10;
+}
+
+.curtains {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: url(images/curtains3-transformed.jpeg) no-repeat center center;
+    background-size: cover;
+    z-index: 1;
+    animation: pulseOut 3s ease-out forwards;
+}
+
+.henny-penny-regular {
+    font-family: "Henny Penny", system-ui;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+@keyframes showTitle {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0)
+    }
+}
+
+.title {
+    font-size: 5rem;
+    font-family: "Henny Penny", Arial, sans-serif;
+    color: white;
+    text-shadow: 10px 3px 1px rgba(0, 0, 0, 0.9); 
+    margin: 0;
+    opacity: 0;
+    animation: showTitle 1.8s ease-out forwards 0.2s ;
+}
+
+.title-two {
+    font-size: 10.5rem;
+    font-family: "Henny Penny", Arial, sans-serif;
+    color: white;
+    text-shadow: 13px 5px 1px rgba(0, 0, 0, 0.9); 
+    margin: 0;
+    opacity: 0;
+    animation: showTitle 1.8s ease-out forwards 0.7s ;
+}
+
+
+.game, .how-to {
+    display: inline-block;
+    font-size: 2.5rem;
+    text-decoration: none;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 15px 30px;
+    margin: 10px;
+    border: 2px solid white;
+    border-radius: 10px;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.game:hover, .how-to:hover {
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.8);
+    color: black;
+    transform: scale(1.1);
+    transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+
+}
+
+
+@keyframes pulseOut{
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.05);
+    }
+}
+
+
+
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+
+    .title {
+        font-size: 3.5rem;
+    }
+
+    .title-two {
+        font-size: 6rem;
+    }
+
+    .game, .how-to {
+        font-size: 1.5rem;
+        padding: 10px 20px;
+    }
+}

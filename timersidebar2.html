@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timer</title>
+    <link rel="stylesheet" href="./timersidebar2.css">
+    <script src="./timersidebar2.js" defer></script>
+</head>
+<body>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Creepster&display=swap" rel="stylesheet">
+    <div class="timer-container">
+        <div class="timer-circle">
+            <svg class="circle" width="200" height="200">
+                <circle cx="100" cy="100" r="90" stroke-width="10" stroke="#ddd" fill="none" />
+                <circle id="progressCircle" cx="100" cy="100" r="90" stroke-width="10" stroke="red" fill="none" stroke-dasharray="565.48" stroke-dashoffset="0" />
+            </svg>
+            <div id="timerText" class="timer-text">
+                <span id="timeLeft">10</span> seconds
+            </div>
+        </div>
+    </div>
+</body>
+</html>

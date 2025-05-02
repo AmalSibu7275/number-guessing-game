@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Difficulty Levels</title>
+    <link rel="stylesheet" href="levels.css"> 
+    <script src="levels_faizan.js" defer="true"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Eater&display=swap');
+        </style>
+</head>
+<body>
+    <div class="modes">
+        <div class="greeting"> 
+            <h1 style="opacity: 0;">Welcome,</h1>
+            <h2 style="opacity: 0;"> <span id="playerNameDisplay"></span>...</h2>
+        </div>
+            <h3 class="cookie">the abyss awaits your decision</h3>
+    </div>
+    <div class="buttons">
+        <a href="#" class="button" aria-label="Easy Level" onclick="selectDifficulty('easy')">Easy</a>
+        <a href="#" class="button" aria-label="Medium Level" onclick="selectDifficulty('medium')">Medium</a>
+        <a href="#" class="button" aria-label="Hard Level" onclick="selectDifficulty('hard')">Hard</a>
+    </div>
+
+</body>
+</html>

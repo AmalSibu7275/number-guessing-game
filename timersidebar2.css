@@ -1,0 +1,54 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'creepster', sans-serif;
+    background: rgb(88, 87, 87);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.timer-container {
+    text-align: center;
+    padding: 50px;
+    border-radius: 10px;
+    background: black;
+    width: 300px;
+}
+
+.timer-circle {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.timer-text {
+    position: absolute;
+    font-size: 36px;
+    color: red;
+    font-weight: 700;
+}
+
+.circle {
+    transform: rotate(-90deg);
+    
+}
+
+
+/* Keyframes for circular progress animation */
+@keyframes circleAnimation {
+    0% {
+        stroke-dashoffset: 565.48;  /* Full circle */
+    }
+    100% {
+        stroke-dashoffset: 0;  /* Empty circle */
+    }
+}

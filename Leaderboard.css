@@ -1,0 +1,148 @@
+body {
+        font-family: sans-serif;
+        background: url(images/game\ over.jpeg) no-repeat center center fixed;
+        background-size: cover;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 80%;
+        text-align: center;
+        overflow: hidden;
+}
+
+.henny-penny-regular {
+    font-family: "Henny Penny", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+
+#game-over-container {
+    text-align: center;
+    width: 50%;
+}
+
+#game-over-title {
+    font-size: 4rem;
+    font-family: "Henny Penny", system-ui;
+    color: red;
+    text-shadow: 4px 3px 1px rgba(0, 0, 0, 0.8);
+    text-transform: uppercase;
+    margin-bottom: 1px;
+    opacity: 0;
+    transition: 0.3s ease-out 2s forwards;
+    animation: flicker 0.5s infinite;
+}
+
+@keyframes flicker {
+    0%, 100% { opacity: 1; }
+    25% { opacity: 0.8; }
+    50% { opacity: 0.6; }
+    75% { opacity: 0.4; }
+}
+
+
+#leaderboard-container {
+    background-color: #ffffff3a;
+    border: 5px solid #000000;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    animation: fadeInDown 0.4s ease-in-out 0.7s forwards;
+
+}
+
+
+#difficulty, #name {
+        font-size: 20px;
+        margin: 10px 0;
+        padding: 5px 10px;
+        background-color: #f4f4f4;
+        border-radius: 5px;
+        display: inline-block;
+        color: #333;
+}
+
+#leaderboard-section {
+    margin-top: 20px;
+}
+
+#leaderboard-title {
+    font-size: 30px;
+    color: #444;
+    margin-bottom: 10px;
+}
+
+#leaderboard {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#leaderboard li {
+    font-size: 18px;
+    padding: 10px 15px;
+    margin: 5px 0;
+    background-color: #ddd;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+#leaderboard li:nth-child(odd) {
+    background-color: #bbb;
+}
+
+#main-menu-button {
+    margin-top: 20px;
+    padding: 20px 50px;
+    font-size: 16px;
+    background-color: red;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-transform: uppercase;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+#main-menu-button:hover {
+    background-color: darkred;
+    transform: scale(1.05);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+        pointer-events: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    #game-over-container {
+        width: 90%;
+    }
+
+    #game-over-title {
+        font-size: 2.5rem;
+    }
+
+    #leaderboard-container {
+        padding: 15px;
+    }
+
+    #main-menu-button {
+        padding: 15px 40px;
+        font-size: 14px;
+    }
+}
